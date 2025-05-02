@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AnswerSpace",
   description: "Mimoimio's AnswerSpace",
+  icons: {
+    icon: "/image/favicon.ico",
+  },
+  manifest: "/image/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -26,18 +30,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="image/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="container mx-auto flex justify-between items-center">
+        <nav className="container mx-auto flex justify-between items-center p-2">
           <h1 className="text-4xl font-bold">AnswerSpace</h1>
           <div className="flex gap-8">
-            <Button variant={"ghost"}>Home</Button>
-            <Button variant={"ghost"}>Profile</Button>
-            <Button variant={"ghost"}>Settings</Button>
+            <Button>Home</Button>
+            <Button>Profile</Button>
+            <Button>Settings</Button>
           </div>
         </nav>
         {children}
