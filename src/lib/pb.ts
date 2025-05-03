@@ -32,5 +32,7 @@ global.__pbReady =
  */
 export async function getPB() {
     await global.__pbReady;
+    console.log("getPB() called");
+    console.log(pb.authStore.isValid);
     return pb;
 }
