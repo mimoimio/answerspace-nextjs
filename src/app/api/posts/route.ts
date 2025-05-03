@@ -1,4 +1,9 @@
-
+interface Post {
+    post_id: number;
+    title: string;
+    content: string;
+    user: string;
+}
 const posts = [
     {
         post_id: 1,
@@ -68,5 +73,5 @@ export async function GET() {
     return Response.json({ posts });
 }
 export async function POST() {
-    return new Response("Bello, Next.js!");
+    return Response.json({ bruh: "bruh" });
 }
