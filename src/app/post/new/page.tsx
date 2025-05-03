@@ -64,7 +64,7 @@ export default function NewPost() {
     return (
         <main className="container mx-auto">
             {success && <h1 className="text-3xl font-bold py-12 text-center">Post submitted successfully!</h1>}
-            <Card className="w-2xl mx-auto">
+            <Card className="max-w-2xl mx-auto">
                 <CardHeader>
                     <CardTitle>New Post</CardTitle>
                 </CardHeader>

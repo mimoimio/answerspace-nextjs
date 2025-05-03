@@ -27,7 +27,7 @@ export default async function User({ params }: { params: Promise<{ username: str
 
     return (
         <main className="container mx-auto">
-            <Card className="w-2xl mx-auto">
+            <Card className="max-w-2xl mx-auto">
                 <CardContent>
                     <h1 className="text-6xl font-bold py-12 text-center">{user.displayName || username}</h1>
                     <p className="text-2xl font-bold py-12 text-center">{user.bio}</p>

@@ -18,7 +18,7 @@ const getPosts = async () => {
 export default async function Posts() {
     const posts: Post[] = await getPosts()
     return (
-        <div className="grid grid-cols-3 gap-8">
+        <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
             {
                 posts.map((post) => (
                     <Card key={post.post_id} className="h-fit hover:shadow-lg transition-shadow duration-500">

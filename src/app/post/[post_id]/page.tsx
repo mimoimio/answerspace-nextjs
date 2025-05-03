@@ -10,7 +10,7 @@ export default async function Post({ params }: { params: Promise<{ post_id: stri
     return (
         <main className="container mx-auto">
             {post ?
-                <Card className="w-2xl mx-auto">
+                <Card className="max-w-2xl mx-auto">
                     <CardHeader>
                         <BackButton />
                         <CardTitle>{post.title}</CardTitle>

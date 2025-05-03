@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Loading() {
     return (
         <main className="container mx-auto">
-            <Card className="w-2xl mx-auto">
+            <Card className="max-w-2xl mx-auto">
                 <CardHeader>
                     {/* <p className="text-gray-400 animate-pulse">lol</p> */}
                     <Skeleton className="h-10 w-1/6" />

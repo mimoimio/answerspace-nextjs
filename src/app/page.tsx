@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="container mx-auto">
-      <h1 className="text-9xl font-bold py-12 text-center">AnswerSpace</h1>
+      <h1 className="text-center font-bold text-3xl py-6 md:text-9xl md:py-12 ">AnswerSpace</h1>
       <div className="flex justify-center py-8">
         <Button ><Link href="/post/new">New Post</Link></Button>
       </div>
