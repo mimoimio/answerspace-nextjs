@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import type { User } from "@/app/api/users/data";
 
 export default async function User({ params }: { params: Promise<{ username: string }> }) {
     const { username } = await params;
@@ -7,7 +8,7 @@ export default async function User({ params }: { params: Promise<{ username: str
     const normalizedUsername = username.toLowerCase();
 
     // Fetch user data using username as the key
-    const user = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${normalizedUsername}`, {
+    const user: User = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${normalizedUsername}`, {
         method: "GET",
         cache: "no-store"
     })

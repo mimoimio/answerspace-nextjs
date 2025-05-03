@@ -1,4 +1,4 @@
-import { users } from "../route";
+import { users } from "../data";
 
 export async function GET(
   request: Request,
