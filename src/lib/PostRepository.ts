@@ -1,6 +1,6 @@
 import { getPB } from "./pb";
 const pb = await getPB();
-// maybe this is ok idk
+// maybe this is ok idk, yea actually
 
 export interface Post {
     id: string;
@@ -10,11 +10,11 @@ export interface Post {
 }
 export const PostRepository = {
     firstPage: async () => {
-        const posts = await pb.collection('posts').getList(1, 30);
+        const posts = await pb.collection('posts').getList(1, 30, { sort: '-created' });
         return posts;
     },
     listAll: async () => {
-        const posts = await pb.collection('posts').getFullList();
+        const posts = await pb.collection('posts').getFullList({ sort: '-created' });
         return posts;
     },
     getById: async (id: string) => {
