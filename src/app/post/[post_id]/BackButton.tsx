@@ -1,0 +1,16 @@
+'use client'
+
+import { Button } from "@/components/ui/button";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+
+export default function BackButton() {
+    return (
+        <div className="flex gap-2 mb-4 items-center">
+            <Button onClick={() => window.history.back()} className="flex items-center gap-2" variant={"ghost"}>
+                <ArrowLeftIcon />
+            </Button>
+            <h1 className="text-xl font-bold">Post</h1>
+        </div>
+
+    )
+}

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className="container mx-auto flex justify-between items-center p-2">
-          <h1 className="text-4xl font-bold">AnswerSpace</h1>
+          <h1 className="text-4xl font-bold"><Link href="/">AnswerSpace</Link></h1>
           <div className="flex gap-8">
             <Button>Home</Button>
             <Button>Profile</Button>
