@@ -3,11 +3,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 {/*
   TODO: 
-  - vercel postgres                
+  - vercel postgres               
   - post (singular) page          /
   - create new post page          /
   - user profile page             /
   - api endpoints
+  - user auth
+    - login
+    - register
+    - logout
   
   Later:
   - checkout "use server" on functions for easy server actions from client components

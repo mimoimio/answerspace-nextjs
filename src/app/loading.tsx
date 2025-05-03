@@ -7,7 +7,7 @@ export default function Loading() {
 
     return (
         <main className="container mx-auto">
-            <h1 className="text-9xl font-bold py-12 text-center">AnswerSpace</h1>
+            <h1 className="text-center font-bold text-3xl py-6 md:text-9xl md:py-12 ">AnswerSpace</h1>
             <div className="grid grid-cols-3 gap-8">
                 {
                     "abcdefghi".split("").map((i) => (

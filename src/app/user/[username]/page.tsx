@@ -1,12 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import type { User } from "@/app/api/users/data";
-
 export default async function User({ params }: { params: Promise<{ username: string }> }) {
     const { username } = await params;
-
     // Normalize username for consistent lookups (optional)
     const normalizedUsername = username.toLowerCase();
-
     // Fetch user data using username as the key
     const user: User = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${normalizedUsername}`, {
         method: "GET",
@@ -33,7 +30,6 @@ export default async function User({ params }: { params: Promise<{ username: str
                     <p className="text-2xl font-bold py-12 text-center">{user.bio}</p>
                 </CardContent>
             </Card>
-            {/* User profile content */}
         </main>
     );
 }
