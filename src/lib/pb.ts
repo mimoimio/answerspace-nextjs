@@ -1,11 +1,12 @@
 // lib/pb.ts
+/* eslint-disable no-var */
 import PocketBase from "pocketbase";
 
 declare global {
-    // Re‑use across hot‑reloads in `next dev`
-    var __pb: PocketBase | undefined;
-    var __pbReady: Promise<void> | undefined;
+    var __pb: PocketBase | undefined;          // eslint-disable-line no-var
+    var __pbReady: Promise<void> | undefined;  // eslint-disable-line no-var
 }
+/* eslint-enable no-var */
 
 const PB_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL!;
 const ADMIN = process.env.POCKETBASE_ADMIN_EMAIL;
