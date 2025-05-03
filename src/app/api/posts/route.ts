@@ -4,7 +4,7 @@ interface Post {
     content: string;
     user: string;
 }
-const posts = [
+const posts: Post[] = [
     {
         post_id: 1,
         title: "Why does it sound so good?Why does it sound so good?Why does it sound so good?Why does it sound so good?Why does it sound so good?",

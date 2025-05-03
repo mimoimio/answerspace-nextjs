@@ -16,6 +16,6 @@ export const users = [
     },
 ]
 export function GET(req: Request) {
-    return Response.json({ bruh: "bruh" });
+    return Response.json({ users });
 }
 
