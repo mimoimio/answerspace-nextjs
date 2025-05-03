@@ -10,7 +10,7 @@ export interface Post {
 }
 
 const getPosts = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`, { cache: "no-cache" })
     if (response.ok) {
         const posts = await response.json().then((data) => data.posts)
         return posts
