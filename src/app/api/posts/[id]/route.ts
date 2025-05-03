@@ -1,6 +1,7 @@
 import { PostRepository } from "@/lib/PostRepository";
 
-export async function GET({ params }: { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: { id: string } }) {
+    console.log(request);
     const { id } = params;
     const post = await PostRepository.getById(id);
     if (!post) {
