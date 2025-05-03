@@ -1,8 +1,7 @@
 import { PostRepository } from "@/lib/PostRepository";
 
-export async function GET(request: Request, params: { id: string }) {
-    console.log(request);
-    const { id } = params;
+export async function GET({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
     const post = await PostRepository.getById(id);
     if (!post) {
         return Response.json({ error: "Post not found😭😭😭😭" }, { status: 404 });
