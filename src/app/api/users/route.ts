@@ -15,7 +15,7 @@ export const users = [
         bio: "I'm a student",
     },
 ]
-export function GET(req: Request) {
+export function GET() {
     return Response.json({ users });
 }
 

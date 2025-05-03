@@ -1,8 +1,8 @@
-import { Card, CardHeader, CardFooter, CardTitle, CardAction, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import PostActionsFooter from "./ui/PostActionsFooter";
 
-interface Post {
+export interface Post {
     post_id: number;
     title: string;
     content: string;
