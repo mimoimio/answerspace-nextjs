@@ -34,9 +34,7 @@ export default async function Posts() {
                                 <CardDescription>by {post.user}</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p>{post.content}</p>
-                                <div className="flex justify-end">
-                                </div>
+                                <p className="line-clamp-3">{post.content}</p>
                             </CardContent>
                         </Link>
                         <PostActionsFooter />

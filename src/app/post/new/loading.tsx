@@ -10,7 +10,7 @@ export default function Loading() {
                     {/* <p className="text-gray-400 animate-pulse">lol</p> */}
                     <Skeleton className="h-10 w-1/6" />
                     {/* <Skeleton className="h-6 w-1/2" /> */}
-                    <Skeleton className="h-h-6 w-1/2 text-gray-400 flex items-center justify-start px-4" >Intentional 3s Delay lol...</Skeleton>
+                    <Skeleton className="h-6 w-1/6" />
                     <Skeleton className="h-6 w-1/6" />
                 </CardHeader>
                 <CardContent className="space-y-4">

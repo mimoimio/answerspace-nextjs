@@ -26,6 +26,7 @@ export const PostRepository = {
         return post;
     },
     update: async (id: string, data: Post) => {
+        
         const post = await pb.collection('posts').update(id, data);
         return post;
     },

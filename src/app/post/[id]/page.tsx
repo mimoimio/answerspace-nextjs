@@ -1,7 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import BackButton from "./BackButton"
+import BackButton from "../../../components/BackButton"
 import PostActionsFooter from "@/components/ui/PostActionsFooter"
 import type { Post } from "@/components/Posts"
+import DeleteButton from "./DeleteButton"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default async function Post({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -45,15 +48,18 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
             );
         }
 
-        // Wait for the intentional delay
-        // await new Promise((resolve) => setTimeout(resolve, 3000));
-
         return (
             <main className="container mx-auto">
                 {post ? (
                     <Card className="max-w-2xl mx-auto">
                         <CardHeader>
-                            <BackButton />
+                            <div className="flex justify-between">
+                                <BackButton />
+                                <div className="flex gap-4">
+                                    <Link href={`/post/${post.id}/edit`}><Button variant="ghost" className="cursor-pointer">Edit</Button></Link>
+                                    <DeleteButton id={post.id} />
+                                </div>
+                            </div>
                             <CardTitle>{post.title}</CardTitle>
                             <CardDescription>by {post.user}</CardDescription>
                         </CardHeader>
