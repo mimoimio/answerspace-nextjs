@@ -40,16 +40,15 @@ export default function DeleteButton({ id }: DeleteButtonProps) {
                 <DialogContent>
                     <DialogHeader>
                         <DialogTitle>Are yo-</DialogTitle>
-                        <DialogDescription>
-                            This action cannot be undone. This will permanently delete your account
-                            and remove your data from our servers.
-                        </DialogDescription>
                         <div className="max-w-[450px]">
                             <AspectRatio ratio={1 / 1}>
                                 <Image src={"/image/areyousure.gif"} alt="Image" className="rounded-md object-cover" width={450} height={450} />
                             </AspectRatio>
                         </div>
                         <Separator className="my-4" />
+                        <DialogDescription>
+                            This action cannot be undone. This will permanently the post even if it's not yours (maleh aq nak buat authenticaiton).
+                        </DialogDescription>
                         <Button variant="destructive" onClick={handleDelete}>
                             <TrashIcon className="mr-2 h-4 w-4" />
                             Delete
