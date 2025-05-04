@@ -1,8 +1,5 @@
-import { SiPocketbase } from "react-icons/si";
 import Posts from "@/components/Posts";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { RiGithubFill, RiNextjsFill } from "react-icons/ri";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 {/*
