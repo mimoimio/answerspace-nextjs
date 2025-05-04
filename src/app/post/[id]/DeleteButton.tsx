@@ -47,7 +47,7 @@ export default function DeleteButton({ id }: DeleteButtonProps) {
                         </div>
                         <Separator className="my-4" />
                         <DialogDescription>
-                            This action cannot be undone. This will permanently the post even if it's not yours (maleh aq nak buat authenticaiton).
+                            {"This action cannot be undone. This will permanently the post even if it's not yours (maleh aq nak buat authenticaiton)."}
                         </DialogDescription>
                         <Button variant="destructive" onClick={handleDelete}>
                             <TrashIcon className="mr-2 h-4 w-4" />
