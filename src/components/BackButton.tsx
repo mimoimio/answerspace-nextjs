@@ -5,7 +5,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 export default function BackButton() {
     return (
-        <div className="flex gap-2 mb-4 items-center">
+        <div className="flex gap-2 items-center">
             <Button onClick={() => window.history.back()} className="flex items-center gap-2 hover:cursor-pointer" variant={"ghost"} >
                 <ArrowLeftIcon />
             </Button>

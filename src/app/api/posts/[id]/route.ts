@@ -1,4 +1,7 @@
 import { PostRepository } from "@/lib/PostRepository";
+import { getPB } from "@/lib/pb";
+
+console.log(getPB())
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) { // Request object will always be the first argument
     console.log(request);

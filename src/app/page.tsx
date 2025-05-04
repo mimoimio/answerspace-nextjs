@@ -4,10 +4,11 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 {/*
   TODO: 
-  - vercel postgres               
+  - pocketbase                    /
   - post (singular) page          /
   - create new post page          /
   - user profile page             /
+  - sonner component after newpost
   - api endpoints
   - user auth
     - login

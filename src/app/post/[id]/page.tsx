@@ -10,7 +10,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
     const { id } = await params
 
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${id}`, { cache: "force-cache", next: { revalidate: 60 } });
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${id}`, { cache: "no-cache" });
 
         // Check if response is OK
         if (!response.ok) {
@@ -53,9 +53,9 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
                 {post ? (
                     <Card className="max-w-2xl mx-auto">
                         <CardHeader>
-                            <div className="flex justify-between">
+                            <div className="flex justify-between items-center mb-4 ">
                                 <BackButton />
-                                <div className="flex gap-4">
+                                <div className="flex gap-4 items-center">
                                     <Link href={`/post/${post.id}/edit`}><Button variant="ghost" className="cursor-pointer">Edit</Button></Link>
                                     <DeleteButton id={post.id} />
                                 </div>

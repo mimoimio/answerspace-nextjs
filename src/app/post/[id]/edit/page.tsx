@@ -24,7 +24,7 @@ export default function NewPost({ params }: { params: Promise<{ id: string }> })
     const [post, setPost] = useState({ id: "", title: "", content: "" })
     useEffect(() => {
         params.then((params) => {
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${params.id}`)
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${params.id}`, { cache: "no-cache" })
                 .then(res => res.json())
                 .then(data => setPost(data))
         })
