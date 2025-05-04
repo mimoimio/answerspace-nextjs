@@ -2,9 +2,6 @@
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { DialogTrigger } from "@/components/ui/dialog";
-import { Separator } from "@/components/ui/separator";
 import { TrashIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useState } from "react";
@@ -20,7 +17,6 @@ import {
     DialogStackOverlay,
     DialogStackPrevious,
     DialogStackTitle,
-    DialogStackTrigger,
 } from '@/components/ui/shadcn-io/dialog-stack';
 // Define the props interface
 interface DeleteButtonProps {
@@ -50,7 +46,7 @@ export default function DeleteButton({ id }: DeleteButtonProps) {
     return (
         <>
 
-            <Button variant="outline" onClick={() => setOpen(!open)}>Toggle Dialog</Button>
+            <Button variant="destructive" onClick={() => setOpen(!open)}>Delete<TrashIcon /></Button>
 
             <DialogStack open={open} onOpenChange={setOpen}>
                 <DialogStackOverlay />
