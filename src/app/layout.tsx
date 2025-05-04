@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -40,9 +39,9 @@ export default function RootLayout({
         <nav className="container mx-auto p-2 flex justify-between items-center ">
           <h1 className="text-4xl font-bold"><Link href="/">AnswerSpace</Link></h1>
           <div className="hidden md:gap-8 md:flex md:items-center  ">
-            <Button>Home</Button>
-            <Button>Profile</Button>
-            <Button>Settings</Button>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/"}>Profile</Link>
+            <Link href={"/"}>Settings</Link>
           </div>
           <MobileNav />
         </nav>
