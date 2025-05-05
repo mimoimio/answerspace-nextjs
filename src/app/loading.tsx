@@ -1,3 +1,5 @@
+import Hero from "@/components/Hero";
+import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -7,11 +9,15 @@ export default function Loading() {
 
     return (
         <main className="container mx-auto">
-            <h1 className="text-center font-bold text-3xl py-6 md:text-9xl md:py-12 ">AnswerSpace</h1>
-            <div className="grid grid-cols-3 gap-8">
+            <Hero />
+            <hr />
+            <div className="flex justify-center py-8">
+                <Button variant={"secondary"} className="disabled cursor-not-allowed" >New Post</Button>
+            </div>
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
                 {
                     "abcdefghi".split("").map((i) => (
-                        <Card key={i}>
+                        <Card key={i} >
                             <CardHeader>
                                 <CardTitle>
                                     <Skeleton className="h-6 w-1/2" />

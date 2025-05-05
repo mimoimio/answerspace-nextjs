@@ -64,7 +64,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
                             <CardDescription>by {post.user}</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>{post.content}</p>
+                            <p className=" text-justify">{post.content}</p>
                         </CardContent>
                         <PostActionsFooter />
                     </Card>

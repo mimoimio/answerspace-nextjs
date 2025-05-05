@@ -6,6 +6,7 @@ import { TrashIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 // Define the props interface
 interface DeleteButtonProps {
     id: string;
@@ -33,9 +34,10 @@ export default function DeleteButton({ id }: DeleteButtonProps) {
         <>
             <Dialog>
                 <DialogTrigger>
-                    <Button variant={"destructive"}>
-                        <TrashIcon />
-                    </Button>
+                    <Badge variant="destructive" className="h-8">
+                        <TrashIcon className="text-9xl" />
+
+                    </Badge>
                 </DialogTrigger>
                 <DialogContent>
                     <DialogHeader>
