@@ -34,7 +34,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <nav className="container mx-auto p-2 flex justify-between items-center ">
           <h1 className="text-4xl font-bold"><Link href="/">AnswerSpace</Link></h1>
