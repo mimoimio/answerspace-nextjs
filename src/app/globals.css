@@ -118,8 +118,10 @@
   }
   body {
     @apply text-foreground ;
-    background: linear-gradient(180deg, var(--background) 0%, oklch(.3 .1 300) 100%) fixed no-repeat;
-
+    background: 
+    linear-gradient(180deg, var(--background) 0%, oklch(.6 .1 300) 100%) fixed no-repeat;
     
   }
+  
 }
+

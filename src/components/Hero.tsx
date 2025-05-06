@@ -5,7 +5,7 @@ import { RiGithubFill, RiNextjsFill } from "react-icons/ri";
 
 export default function Hero() {
     return (<>
-        <h1 className="text-center font-bold text-3xl py-6 md:text-9xl md:py-12 uppercase ">Answer<span className="inline-flex animate-[spin_20s_linear_infinite] ">S</span>pace</h1>
+        <h1 className="text-center font-bold text-3xl py-6 md:text-9xl md:py-12 uppercase specialgradient">Answer<span className="inline-flex animate-[spin_20s_linear_infinite] ">S</span>pace</h1>
         <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-4">
             <Card className="max-w-s my-4">
                 <CardContent className="flex justify-center items-center gap-4">
