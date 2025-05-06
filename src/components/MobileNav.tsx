@@ -9,6 +9,7 @@ export default function MobileNav() {
     const toggle = () => setIsOpen(!isOpen)
     return (
         <>
+            
             <Button variant={"ghost"} onClick={toggle} className="md:hidden"><HamburgerMenuIcon /></Button>
             {isOpen &&
                 <div className="flex flex-col gap-4 absolute w-full top-12 left-0 bg-primary/50 p-4 md:hidden">

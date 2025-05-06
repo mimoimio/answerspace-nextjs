@@ -76,6 +76,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --mydegree: 0deg;
+  --mytheme: oklch(0.8 0.4 230);
 }
 
 .dark {
@@ -110,18 +112,19 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --mydegree: 180deg;
+  --mytheme: oklch(0.1 0.2 250);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply text-foreground ;
-    background: 
-    linear-gradient(180deg, var(--background) 0%, oklch(.6 .1 300) 100%) fixed no-repeat;
-    
-  }
-  
-}
 
+  body {
+    @apply text-foreground;
+    background: linear-gradient(var(--mydegree), var(--background) 0%, var(--mytheme) 100%) fixed no-repeat;
+
+  }
+
+}
