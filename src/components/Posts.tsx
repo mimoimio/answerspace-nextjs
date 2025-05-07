@@ -27,7 +27,7 @@ export default async function Posts() {
         <div className="flex flex-col gap-8 mb-12 md:grid md:grid-cols-3">
             {posts &&
                 posts.map((post: Post) => (
-                    <Card key={post.id} className="h-fit hover:shadow-lg transition-shadow duration-500">
+                    <Card key={post.id} className="h-fit shadow-md shadow-mysecondarytheme hover:shadow-lg transition-shadow duration-500">
                         <Link href={`/post/${post.id}`} className="flex flex-col gap-4">
                             <CardHeader>
                                 <CardTitle>{post.title}</CardTitle>

@@ -41,6 +41,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-mysecondarytheme: var(--mysecondarytheme);
+  --color-mytheme: var(--mytheme);
 }
 
 :root {
@@ -78,6 +80,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --mydegree: 0deg;
   --mytheme: oklch(0.8 0.4 230);
+  --mysecondarytheme: oklch(.1 0.2 250);
 }
 
 .dark {
@@ -113,7 +116,8 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --mydegree: 180deg;
-  --mytheme: oklch(0.1 0.2 250);
+  --mytheme: oklch(0.1 0.2 250 / 100%);
+  --mysecondarytheme: oklch(0.8 0.4 230);
 }
 
 @layer base {
@@ -124,6 +128,7 @@
   body {
     @apply text-foreground;
     background: linear-gradient(var(--mydegree), var(--background) 0%, var(--mytheme) 100%) fixed no-repeat;
+
 
   }
 

@@ -22,6 +22,8 @@ const formSchema = z.object({
 
 export default function NewPost({ params }: { params: Promise<{ id: string }> }) {
     const [post, setPost] = useState({ id: "", title: "", content: "" })
+    const [loading, setLoading] = useState(true)
+
     useEffect(() => {
         params.then((params) => {
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${params.id}`, { cache: "no-cache" })
@@ -51,6 +53,7 @@ export default function NewPost({ params }: { params: Promise<{ id: string }> })
                 content: post.content
             });
         }
+        setLoading(false)
     }, [post, form]);
 
     // 2. Define a submit handler.
@@ -79,7 +82,7 @@ export default function NewPost({ params }: { params: Promise<{ id: string }> })
                                     <FormItem>
                                         <FormLabel>Title</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Write your post title here..." {...field} />
+                                            <Input placeholder={loading ? "Loading..." : "Write your post title here..."} {...field} disabled={loading} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -92,7 +95,7 @@ export default function NewPost({ params }: { params: Promise<{ id: string }> })
                                     <FormItem>
                                         <FormLabel>Content</FormLabel>
                                         <FormControl>
-                                            <Textarea placeholder="Write your post content here..." {...field} />
+                                            <Textarea placeholder={loading ? "Loading..." : "Write your post content here..."} {...field} disabled={loading} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>

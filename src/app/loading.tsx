@@ -17,7 +17,7 @@ export default function Loading() {
             <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
                 {
                     "abcdefghi".split("").map((i) => (
-                        <Card key={i} >
+                        <Card key={i} className="h-fit shadow-md shadow-mysecondarytheme hover:shadow-lg transition-shadow duration-500">
                             <CardHeader>
                                 <CardTitle>
                                     <Skeleton className="h-6 w-1/2" />
